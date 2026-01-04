@@ -118,7 +118,7 @@ async def givemecheese(ctx):
 @bot.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def givemesandwich(ctx):
-    breads = ["🍞 White Bread", "🥖 Baguette", "🥯 Bagel", "🍞 Rye", "🥐 Croissant", "🌌🍞🤖 Holographic Bread"]
+    breads = ["🍞 White Bread", "🥖 Baguette", "🥯 Bagel", "🍞 Rye", "🥐 Croissant", "🌌🍞🤖 Holographic Bread", "💎🍞 Diamond Bread"]
     cheeses = ["🧀 Cheddar", "🧀 Brie", "🧀 Gouda", "🧀 Swiss", "🧀 Mozzarella", "🌟🧀 Mythical Mooncheese"]
 
     legendary_bread = "✨🍞⭐ Legendary Sourbread"
@@ -185,8 +185,8 @@ async def feedme(ctx):
     await ctx.send(f"{random.choice(foods)} Eat up!")
 
 
-# Command: shows the bot's menu
-@bot.command()
+# Command: shows the bot's commands
+@bot.command(aliases=["cmds"])
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def bakerymenu(ctx):
     menu = (
@@ -239,6 +239,28 @@ async def givemesoda(ctx):
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def version(ctx):
     await ctx.send("🍞 bread.bot **V 3.0**, Python Edition")
+
+
+# Command: Secret command that makes the bot say "Shhh.. 🤫"
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def secretbread(ctx):
+    await ctx.send("Shhh.. 🤫")
+
+# Command: Sends a random letter from the alphabet
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def letter(ctx):
+    letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    await ctx.send(f"{random.choice(letters)}"
+
+
+# Command: Sends a random number from 1 to 10
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def number(ctx):
+        numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        await ctx.send(f"{random.choice(numbers)}"
 
 
 # Load the bot token from environment variables
