@@ -118,8 +118,8 @@ async def givemecheese(ctx):
 @bot.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def givemesandwich(ctx):
-    breads = ["🍞 White Bread", "🥖 Baguette", "🥯 Bagel", "🍞 Rye", "🥐 Croissant", "🌌🍞🤖 Holographic Bread", "💎🍞 Diamond Bread"]
-    cheeses = ["🧀 Cheddar", "🧀 Brie", "🧀 Gouda", "🧀 Swiss", "🧀 Mozzarella", "🌟🧀 Mythical Mooncheese"]
+    breads = ["🍞 White Bread", "🥖 Baguette", "🥯 Bagel", "🍞 Rye", "🥐 Croissant", "✨🍞⭐ Legendary Sourbread", "🌌🍞🤖 Holographic Bread", "💎🍞 Diamond Bread", "🌈🍞 Rainbow Bread"]
+    cheeses = ["🧀 Cheddar", "🧀 Brie", "🧀 Gouda", "🧀 Swiss", "🧀 Mozzarella", "🌟🧀 Mythical Mooncheese", "🌈🧀 Rainbow Cheese"]
 
     legendary_bread = "✨🍞⭐ Legendary Sourbread"
     mythical_cheese = "🌟🧀 Mythical Mooncheese"
@@ -201,6 +201,7 @@ async def bakerymenu(ctx):
         "⚔️ `!foodfight @user [--weapon 🍕]` – Battle someone with food\n"
         "🥒 `!pickle` – Pickle\n"
         "🤖 `!whomadeyou` – Creator info\n"
+        "🤫 `!secretbread` – Secret command\n"
     )
     await ctx.send(menu)
 
@@ -238,7 +239,7 @@ async def givemesoda(ctx):
 @bot.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def version(ctx):
-    await ctx.send("🍞 bread.bot **V 3.0**, Python Edition")
+    await ctx.send("🍞 bread.bot **V 6.0**, Python Edition")
 
 
 # Command: Secret command that makes the bot say "Shhh.. 🤫"
@@ -252,16 +253,50 @@ async def secretbread(ctx):
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def letter(ctx):
     letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    await ctx.send(f"{random.choice(letters)}"
+    await ctx.send(f"{random.choice(letters)}")
 
 
 # Command: Sends a random number from 1 to 10
 @bot.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def number(ctx):
-        numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        await ctx.send(f"{random.choice(numbers)}"
+    numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    await ctx.send(f"{random.choice(numbers)}")
 
+
+# Command: Generates a random amount of bread
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def givememorebread(ctx):
+    breads = ["🍞", "🍞🍞", "🍞🍞🍞", "🍞🍞🍞🍞", "🍞🍞🍞🍞🍞", "🍞🍞🍞🍞🍞🍞", "🍞🍞🍞🍞🍞🍞🍞", "🍞🍞🍞🍞🍞🍞🍞🍞", "🍞🍞🍞🍞🍞🍞🍞🍞🍞", "🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞"]
+    await ctx.send(random.choice(breads))
+
+
+# Command: Sends a random emoji
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def emoji(ctx):
+    emojis = [
+        "😀", "😂", "😍", "😎", "😡", "😢", "😴", "😇", "😈", "😭", "😱", "😳",
+        "😵", "😷", "😸", "😹", "😺", "😻", "😼", "😽", "😾", "😿", "🙀",
+        "🙁", "🙂", "🙃", "🙄", "🙅", "🙆", "🙇", "🙈", "🙉", "🙊", "🙋",
+        "🙌", "🙍", "🙎", "🙏", "🚶", "🚷", "🚸", "🚹", "🚺", "🚻", "🚼",
+        "🚽", "🚾"
+    ]
+    await ctx.send(random.choice(emojis))
+  
+# Command: Sends a random string of characters
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def soifudghsofidughsdfuoighsfduiogshdfuiogshdfouighosuifghsio(ctx):
+    chaos = [
+        "ubiohgsfdnnhouisgbfdsuhgbifnosbgunfihodsbgfhudniosgbfduhnio",
+        "sdjfhguisdhfguihsdfguisdhfguihsdfguisdhfguihsdfg",
+        "hdfuighsduifghsduifghsduifghsduifghsduifgh",
+        "bdfuighbdfuighbdfuighbdfuighbdfuigh",
+        "sduifghsduifghsduifghsduifghsduifgh"
+    ]
+    await ctx.send(random.choice(chaos))
 
 # Load the bot token from environment variables
 token = os.getenv("BOT_TOKEN")
@@ -269,23 +304,4 @@ if not token:
     raise RuntimeError("BOT_TOKEN not found in environment variables.")
 
 # Start the bot
-bot.run(token) 
-
-# DO NOT REMOVE LINES BELOW
-# MIT License
-# Copyright (c) 2026 ItsLukeSter
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+bot.run(token)
