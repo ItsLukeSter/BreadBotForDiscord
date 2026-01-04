@@ -1,4 +1,4 @@
-# ============================================================
+# ======================================================================================================================================
 #  DO NOT REMOVE THIS LINE
 #  Made by ItsLukeSter (github.com/ItsLukeSter)
 #  Discord: Hello12231223
@@ -6,7 +6,7 @@
 #  Have fun doing anything with this bots code, however please credit me and do not claim it as your own or make malicous changes to it.
 #  I have added comments to help you understand the code.
 #  © ItsLukeSter 2026
-# ============================================================
+# ======================================================================================================================================
 # Import the Discord library
 import discord
 # Import commands extension for creating bot commands
