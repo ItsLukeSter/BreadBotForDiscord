@@ -1,4 +1,9 @@
-# DO NOT REMOVE THIS LINE - Made by ItsLukeSter (github.com/ItsLukeSter) / Hello12231223 (my discord username)
+# ============================================================
+#  DO NOT REMOVE THIS LINE
+#  Made by ItsLukeSter (github.com/ItsLukeSter)
+#  Discord: Hello12231223
+#  © 2026
+# ============================================================
 # Import the Discord library
 import discord
 # Import commands extension for creating bot commands
