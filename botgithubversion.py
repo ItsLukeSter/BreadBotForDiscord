@@ -43,6 +43,7 @@ async def on_command_error(ctx, error):
 # Event: runs when the bot successfully logs in
 @bot.event
 async def on_ready():
+    bot.start_time = datetime.now()
     print(f"Logged in as {bot.user}")
     # Start the hourly background task
     asyncio.create_task(hourly_on_the_hour())
@@ -239,7 +240,7 @@ async def givemesoda(ctx):
 @bot.command()
 @commands.cooldown(1, 3, commands.BucketType.user)
 async def version(ctx):
-    await ctx.send("🍞 bread.bot **V 6.0**, Python Edition")
+    await ctx.send("🍞 bread.bot **V 7.0**, Python Edition")
 
 
 # Command: Secret command that makes the bot say "Shhh.. 🤫"
@@ -284,6 +285,21 @@ async def emoji(ctx):
         "🚽", "🚾"
     ]
     await ctx.send(random.choice(emojis))
+
+# Command: Shows the bot's uptime
+@bot.command()
+@commands.cooldown(1, 3, commands.BucketType.user)
+async def uptime(ctx):
+    delta = datetime.now() - bot.start_time
+
+    days = delta.days
+    hours, remainder = divmod(delta.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+
+    await ctx.send(
+        f"🕒 Uptime is {days} day(s), {hours} hour(s), {minutes} minute(s), {seconds} second(s) "
+        f"(Time is in day/hour/minute/second)"
+    )
 
 # Load the bot token from environment variables
 token = os.getenv("BOT_TOKEN")
