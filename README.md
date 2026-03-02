@@ -1,6 +1,6 @@
 # BreadBotForDiscord Bot Template
 
-Follow these steps to get your own instance of Bread Bot running:
+Follow these steps to get your own instance of bread.bot running:
 1. Create the Bot Application
 
 Go to the Discord Developer Portal by clicking [here.](https://discord.com/developers/applications)
@@ -17,7 +17,7 @@ Enable "MESSAGE CONTENT INTENT" further down on the same page.
 
 2. Download the Files
 
-Go to the Releases page by clicking [here.](https://github.com/the-awesome-noob/BreadBotForDiscord/releases)
+Go to the Releases page by clicking [here.](https://github.com/the-awesome-noob/BreadBotFord\Discord/releases)
 
 Download botgithubversion.py and requirements.txt from the latest release.
 
